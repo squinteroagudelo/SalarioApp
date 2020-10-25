@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultActivity">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_salary" />
+
+    <TextView
+        android:id="@+id/tvemployee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/tvhoursw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:text="Horas trabajadas:"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.34"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvemployee" />
+
+    <TextView
+        android:id="@+id/tvpriceh"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Valor por hora:"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvhoursw"
+        app:layout_constraintStart_toStartOf="@+id/tvhoursw"
+        app:layout_constraintTop_toBottomOf="@+id/tvhoursw" />
+
+    <TextView
+        android:id="@+id/tvhplus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Horas extras:"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvpriceh"
+        app:layout_constraintStart_toStartOf="@+id/tvpriceh"
+        app:layout_constraintTop_toBottomOf="@+id/tvpriceh" />
+
+    <TextView
+        android:id="@+id/tvresulthours"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvhoursw"
+        app:layout_constraintEnd_toEndOf="@+id/tvresultprice"
+        app:layout_constraintTop_toBottomOf="@+id/tvemployee"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tvresultprice"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvpriceh"
+        app:layout_constraintEnd_toEndOf="@+id/tvresultplus"
+        app:layout_constraintTop_toBottomOf="@+id/tvresulthours"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tvresultplus"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvhplus"
+        app:layout_constraintEnd_toEndOf="@+id/tvresult"
+        app:layout_constraintTop_toBottomOf="@+id/tvresultprice"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tvsalary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="SALARIO NETO:"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/tvhplus"
+        app:layout_constraintStart_toStartOf="@+id/tvhplus"
+        app:layout_constraintTop_toBottomOf="@+id/tvhplus" />
+
+    <TextView
+        android:id="@+id/tvresult"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tvsalary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.19"
+        app:layout_constraintStart_toEndOf="@+id/tvsalary"
+        app:layout_constraintTop_toBottomOf="@+id/tvresultplus"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btncalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="7"
+        android:onClick="calculate"
+        android:text="CALCULAR"
+        app:cornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.928" />
+
+    <Button
+        android:id="@+id/button3"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="7"
+        android:onClick="exit"
+        android:text="SALIR"
+        app:cornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btncalculate"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.928"
+        app:strokeColor="@color/colorPrimary"
+        app:strokeWidth="2dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="$"
+        app:layout_constraintBottom_toBottomOf="@+id/tvresultprice"
+        app:layout_constraintEnd_toStartOf="@+id/tvresultprice"
+        app:layout_constraintTop_toTopOf="@+id/tvresultprice" />
+
+    <TextView
+        android:id="@+id/tvsymbol"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="$"
+        app:layout_constraintBottom_toBottomOf="@+id/tvresult"
+        app:layout_constraintEnd_toStartOf="@+id/tvresult"
+        app:layout_constraintTop_toTopOf="@+id/tvresult" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
